@@ -13,7 +13,7 @@ class DesignTokensThemeExtension
   DesignTokensThemeExtension({
     required this.textDirection,
     required this.colors,
-  }){}
+  }) {}
 
   /// Initializes the design tokens with default
   /// values based on [brand] and [textDirection].

@@ -1,4 +1,3 @@
-
 import 'package:flutter_core_kit/network_module/network/network_client.dart';
 import 'package:flutter_core_kit/network_module/network/network_failure.dart';
 import 'package:flutter_core_kit/network_module/request/request_api.dart';

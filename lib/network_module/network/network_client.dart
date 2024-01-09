@@ -16,7 +16,7 @@ abstract class BaseNetworkClient {
       request<T extends Entity>(
     RequestApi api,
   );
-  
+
   BaseNetworkClient({
     required this.service,
     required this.config,

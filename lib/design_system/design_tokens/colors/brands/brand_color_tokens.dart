@@ -1,4 +1,3 @@
-
 import 'package:flutter_core_kit/design_system/design_tokens/colors/brands/default_brand.dart';
 import 'package:flutter_core_kit/design_system/design_tokens/colors/molecules/color.tokens.dart';
 

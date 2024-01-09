@@ -1,7 +1,7 @@
 name: flutter_core_kit
-description: "Flutter Core Package For Extensions"
+description: "Flutter Core Kit is a versatile Flutter package designed to simplify and enhance common development tasks, providing a robust foundation for building scalable and well-structured Flutter applications. This comprehensive package integrates key functionalities for networking, secure local storage, and a design system, empowering developers to create consistent and feature-rich apps."
 version: 1.0.1
-homepage: https://christhapa.com.np
+homepage: https://github.com/christhapa98/flutter_core_kit/
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
