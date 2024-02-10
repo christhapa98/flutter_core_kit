@@ -13,25 +13,15 @@ abstract class BaseNetworkClient {
   final NetworkService service;
   final NetworkConfiguration config;
   Future<Result<NetworkFailure, NetworkResponseModel<T>>>
-      request<T extends Entity>(
-    RequestApi api,
-  );
+      request<T extends Entity>(RequestApi api);
 
-  BaseNetworkClient({
-    required this.service,
-    required this.config,
-  });
+  BaseNetworkClient({required this.service, required this.config});
 }
 
 class NetworkClient extends BaseNetworkClient {
-  NetworkClient._({
-    required super.config,
-    required super.service,
-  });
+  NetworkClient._({required super.config, required super.service});
   factory NetworkClient.fromConfig(NetworkConfiguration config) {
-    final service = DIONetworkService(
-      config: config,
-    );
+    final service = DIONetworkService(config: config);
     return NetworkClient._(config: config, service: service);
   }
 
@@ -41,9 +31,7 @@ class NetworkClient extends BaseNetworkClient {
 
   @override
   Future<Result<NetworkFailure, NetworkResponseModel<T>>>
-      request<T extends Entity>(
-    RequestApi api,
-  ) async {
+      request<T extends Entity>(RequestApi api) async {
     //Handle Interceptors
     var interceptors = config.interceptors;
     NetworkFailure? interceptorFailure;

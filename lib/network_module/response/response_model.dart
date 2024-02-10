@@ -8,11 +8,10 @@ class NetworkResponseModel<T extends Entity> {
   final Map<String, dynamic> rawObject;
   T? object;
 
-  NetworkResponseModel({
-    required this.api,
-    required this.statusCode,
-    required this.message,
-    required this.rawObject,
-    this.object,
-  });
+  NetworkResponseModel(
+      {required this.api,
+      required this.statusCode,
+      required this.message,
+      required this.rawObject,
+      this.object});
 }

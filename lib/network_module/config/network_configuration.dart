@@ -5,10 +5,7 @@ import 'package:flutter_core_kit/network_module/response/adapter.dart';
 class BaseURL {
   String baseURL;
   String baseVersionEndPath;
-  BaseURL({
-    required this.baseURL,
-    this.baseVersionEndPath = "",
-  });
+  BaseURL({required this.baseURL, this.baseVersionEndPath = ""});
 }
 
 abstract class NetworkConfiguration {
@@ -18,11 +15,10 @@ abstract class NetworkConfiguration {
   List<AppInterceptor> interceptors;
   List<Adapter> adapters;
 
-  NetworkConfiguration({
-    required this.baseURL,
-    this.interceptors = const [],
-    this.adapters = const [],
-    this.timeout = 70,
-    this.networkRequestType = RequestType.rest,
-  });
+  NetworkConfiguration(
+      {required this.baseURL,
+      this.interceptors = const [],
+      this.adapters = const [],
+      this.timeout = 70,
+      this.networkRequestType = RequestType.rest});
 }

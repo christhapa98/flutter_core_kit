@@ -8,8 +8,7 @@ import 'package:flutter_core_kit/network_module/utils/results.dart';
 abstract class Adapter {
   Future<Result<NetworkFailure, NetworkResponseModel<T>>>
       onResponse<T extends Entity>(
-    Result<NetworkFailure, NetworkResponseModel<T>> response,
-    RequestApi api,
-    NetworkClient client,
-  );
+          Result<NetworkFailure, NetworkResponseModel<T>> response,
+          RequestApi api,
+          NetworkClient client);
 }

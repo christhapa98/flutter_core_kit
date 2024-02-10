@@ -1,5 +1,1 @@
-enum RequestType {
-  rest,
-  soap,
-  graphQL,
-}
+enum RequestType { rest, soap, graphQL }

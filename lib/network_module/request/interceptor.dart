@@ -5,7 +5,5 @@ import 'package:flutter_core_kit/network_module/utils/results.dart';
 
 abstract class AppInterceptor {
   Future<Result<NetworkFailure, RequestApi>> onRequest(
-    RequestApi api,
-    NetworkClient client,
-  );
+      RequestApi api, NetworkClient client);
 }

@@ -1,5 +1,5 @@
-## 1.0.1
+## 1.0.2
 
-## Updated Readme and added new design system
+## Added example file , updated dependencies
 
 

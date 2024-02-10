@@ -23,17 +23,14 @@ class DIONetworkService extends NetworkService {
       Response<dynamic> response = await dioClient.get(
         finalUrl,
         queryParameters: api.queryParams,
-        options: Options(
-          headers: api.headers,
-        ),
+        options: Options(headers: api.headers),
       );
       return Success(
         NetworkResponseModel(
-          api: api,
-          statusCode: response.statusCode ?? 0,
-          message: response.statusMessage ?? "",
-          rawObject: response.data,
-        ),
+            api: api,
+            statusCode: response.statusCode ?? 0,
+            message: response.statusMessage ?? "",
+            rawObject: response.data),
       );
     } catch (e) {
       return await _parseError(e);
@@ -47,22 +44,15 @@ class DIONetworkService extends NetworkService {
       String finalUrl = config.baseURL.baseURL +
           config.baseURL.baseVersionEndPath +
           api.endPath;
-      Response<dynamic> response = await dioClient.post(
-        finalUrl,
-        queryParameters: api.queryParams,
-        data: api.formdata ?? api.bodyParams,
-        options: Options(
-          headers: api.headers,
-        ),
-      );
-      return Success(
-        NetworkResponseModel(
+      Response<dynamic> response = await dioClient.post(finalUrl,
+          queryParameters: api.queryParams,
+          data: api.formdata ?? api.bodyParams,
+          options: Options(headers: api.headers));
+      return Success(NetworkResponseModel(
           api: api,
           statusCode: response.statusCode ?? 200,
           message: response.statusMessage ?? "",
-          rawObject: response.data,
-        ),
-      );
+          rawObject: response.data));
     } catch (e) {
       return await _parseError(e);
     }
@@ -79,18 +69,13 @@ class DIONetworkService extends NetworkService {
         finalUrl,
         queryParameters: api.queryParams,
         data: api.formdata ?? api.bodyParams,
-        options: Options(
-          headers: api.headers,
-        ),
+        options: Options(headers: api.headers),
       );
-      return Success(
-        NetworkResponseModel(
+      return Success(NetworkResponseModel(
           api: api,
           statusCode: response.statusCode ?? 200,
           message: response.statusMessage ?? "",
-          rawObject: response.data,
-        ),
-      );
+          rawObject: response.data));
     } catch (e) {
       return await _parseError(e);
     }
@@ -107,18 +92,13 @@ class DIONetworkService extends NetworkService {
         finalUrl,
         queryParameters: api.queryParams,
         data: api.formdata ?? api.bodyParams,
-        options: Options(
-          headers: api.headers,
-        ),
+        options: Options(headers: api.headers),
       );
-      return Success(
-        NetworkResponseModel(
+      return Success(NetworkResponseModel(
           api: api,
           statusCode: response.statusCode ?? 200,
           message: response.statusMessage ?? "",
-          rawObject: response.data,
-        ),
-      );
+          rawObject: response.data));
     } catch (e) {
       return await _parseError(e);
     }
@@ -135,18 +115,13 @@ class DIONetworkService extends NetworkService {
         finalUrl,
         queryParameters: api.queryParams,
         data: api.formdata ?? api.bodyParams,
-        options: Options(
-          headers: api.headers,
-        ),
+        options: Options(headers: api.headers),
       );
-      return Success(
-        NetworkResponseModel(
+      return Success(NetworkResponseModel(
           api: api,
           statusCode: response.statusCode ?? 200,
           message: response.statusMessage ?? "",
-          rawObject: response.data,
-        ),
-      );
+          rawObject: response.data));
     } catch (e) {
       return await _parseError(e);
     }
@@ -160,10 +135,9 @@ class DIONetworkService extends NetworkService {
           final data = e.response?.data as Map<String, dynamic>;
           final error = data["message"] as String?;
           return Failure(NetworkFailure(
-            message: error ?? e.toString(),
-            statusCode: e.response?.statusCode ?? 400,
-            rawObject: data,
-          ));
+              message: error ?? e.toString(),
+              statusCode: e.response?.statusCode ?? 400,
+              rawObject: data));
         } else {
           final connection = await checkInternetConnection();
           if (connection) {
