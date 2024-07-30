@@ -1,6 +1,6 @@
 name: flutter_core_kit
-description: "Flutter Core Kit is a versatile Flutter package designed to simplify and enhance common development tasks, providing a robust foundation for building scalable and well-structured Flutter applications. This comprehensive package integrates key functionalities for networking, secure local storage, and a design system, empowering developers to create consistent and feature-rich apps."
-version: 1.0.3
+description: "Flutter Core Kit"
+version: 1.0.4
 homepage: https://github.com/christhapa98/flutter_core_kit/
 
 environment:
@@ -14,9 +14,9 @@ dependencies:
   # network
   dio: ^5.4.0
   equatable: ^2.0.5
-  connectivity_plus: ^5.0.2
+  connectivity_plus: ^6.0.4
 
-  intl: ^0.18.1
+  intl: ^0.19.0
 
   # local storage
   flutter_secure_storage: ^9.0.0
@@ -26,7 +26,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
+  flutter_lints: ^4.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
