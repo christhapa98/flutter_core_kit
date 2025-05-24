@@ -160,6 +160,7 @@ class DIONetworkService extends NetworkService {
 
   Future<bool> checkInternetConnection() async {
     final connectivityResult = await Connectivity().checkConnectivity();
+    // ignore: unrelated_type_equality_checks
     return connectivityResult != ConnectivityResult.none;
   }
 }
