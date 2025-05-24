@@ -1,5 +1,7 @@
-## 1.0.4
+## 1.0.5
 
-## Latest flutter support, updated intl to 0.19
+## Added Extensions
+## Changed storage to shared_preferences
+## Updated Dependencies
 
 
