@@ -1,1 +1,2 @@
-export './scaffold/custom_scaffold.dart';
+export 'scaffold/custom_scaffold.dart';
+
